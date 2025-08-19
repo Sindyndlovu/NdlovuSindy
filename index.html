@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OrderSphere</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin:0; padding:0; }
+        nav { background-color: #007BFF; padding: 1rem; display:flex; align-items:center; }
+        nav .logo { font-weight:bold; font-size:1.5rem; color:white; margin-right:20px; }
+        nav a { color:white; margin-right:15px; text-decoration:none; }
+        .container { padding:20px; }
+        .products { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:20px; }
+        .card { border:1px solid #ccc; border-radius:8px; padding:15px; text-align:center; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+        .card img { max-width:100%; height:200px; object-fit:contain; }
+        .card button { background:#007BFF; color:white; border:none; padding:10px 15px; cursor:pointer; margin-top:10px; border-radius:5px; }
+        .card button:hover { background:#0056b3; }
+        #cartSection { display:none; margin-top:30px; }
+        #cartItems { list-style:none; padding:0; }
+        #cartItems li { padding:5px 0; display:flex; justify-content:space-between; border-bottom:1px solid #ddd; }
+        footer { background:#f1f1f1; padding:10px; text-align:center; margin-top:40px; font-size:0.9rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"><img src="C:\Users\hungr\OneDrive\Desktop\Walker & KoikSA\ISAT\sindy_isat_fixed\sindy_isat_homecart\images\Logo.png" width="75"></div>
+        <a href="index.html">Home</a>
+        <a href="#cartSection">Cart</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <div class="container">
+        <h1>Welcome to OrderSphere</h1>
+        <div class="products">
+            <div class="card">
+                <img src="images/images (1).jpg" alt="Gaming Laptop">
+                <h3>Gaming Laptop</h3>
+                <p>High performance laptop for gaming and productivity.</p>
+		<p><b>R5 000</b></p>
+                <button onclick="addToCart('Gaming Laptop')">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="images/AYM4Tf-keyboard-transparent.png" alt="Mechanical Keyboard">
+                <h3>Mechanical Keyboard</h3>
+                <p>Durable keyboard with tactile feedback for faster typing.</p>
+<p><b>R800</b></p>
+
+                <button onclick="addToCart('Mechanical Keyboard')">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="images/910-002201_2.png" alt="Wireless Mouse">
+                <h3>Wireless Mouse</h3>
+                <p>Ergonomic mouse with precision tracking and long battery life.</p>
+<p><b>R250</b></p>
+
+                <button onclick="addToCart('Wireless Mouse')">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="images/images.jpg" alt="27&quot; Monitor">
+                <h3>27&quot; Monitor</h3>
+                <p>Crystal-clear 4K UHD display with vibrant colors.</p>
+<p><b>R3 000</b></p>
+
+                <button onclick="addToCart('27&quot; Monitor')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div id="cartSection">
+            <h2>Your Cart</h2>
+            <ul id="cartItems"></ul>
+            <button onclick="completeOrder()">Complete Order</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 OrderSphere. All rights reserved.
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
